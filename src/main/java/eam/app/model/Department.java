@@ -21,11 +21,8 @@ public class Department {
 	private String nameDepartment;
 	
 	//relaciones entre clases
-	@OneToMany(mappedBy = "City")
-	private List<City> cities;
-	
 	@OneToMany(mappedBy = "department")
-	private List<Department> departments;
+	private List<City> cities;
 	
 	//constructores
 	public Department() {

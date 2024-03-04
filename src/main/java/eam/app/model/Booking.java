@@ -40,18 +40,17 @@ public class Booking {
 	
 	@ManyToOne
 	@JoinColumn(name = "idUser",referencedColumnName = "idUser")
-	private User users;
+	private User user;
 	
 	@ManyToOne
-	@JoinColumn(name = "idHotel",referencedColumnName = "idHote")
+	@JoinColumn(name = "idHotel",referencedColumnName = "idHotel")
 	private Hotel hotel;
 	
 	@OneToOne(mappedBy = "booking")
 	private Invoice invoice;
 	
-	@ManyToOne
-	@JoinColumn(name = "idRoom",referencedColumnName = "idRoom")
-	private Room idRoom;
+	@OneToMany(mappedBy = "booking")
+	private List<Room> rooms;
 	
 	
 	//Contructor vacio y con params

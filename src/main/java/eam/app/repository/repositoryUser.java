@@ -7,5 +7,5 @@ import eam.app.model.User;
 
 @Repository
 public interface repositoryUser extends JpaRepository<User, Long>{
-
+	User findByUsernameAndPassword(String username,String password);
 }

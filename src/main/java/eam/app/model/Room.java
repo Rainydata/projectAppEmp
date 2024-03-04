@@ -34,9 +34,15 @@ public class Room {
 	private String modsconsdetails;
 	
 	
-	@OneToMany(mappedBy = "room")
-	private List<Booking> bookings;
+	//relaciones entre clases 
 	
+	@ManyToOne
+	@JoinColumn(name = "idHotel",referencedColumnName = "idHotel")
+	private Hotel hotel;
+	
+	@ManyToOne
+	@JoinColumn(name = "idBooking",referencedColumnName = "idBooking")
+	private Booking booking;
 	
 	// constructores
 	public Room() {

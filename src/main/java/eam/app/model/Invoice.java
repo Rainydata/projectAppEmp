@@ -34,7 +34,7 @@ public class Invoice {
 	
 	@OneToOne
 	@JoinColumn(name = "idBooking", referencedColumnName = "idBooking")
-	private Booking boohing;
+	private Booking booking;
 	
 	//constructores
 	public Invoice() {
